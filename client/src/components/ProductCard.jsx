@@ -45,14 +45,14 @@ const ProductCard = ({ product }) => {
             <div onClick={(e) => {e.stopPropagation(); }} className="text-primary">
               {!cartItems[product._id] ? (
                 <button
-                  className="flex items-center justify-center gap-1 bg-primary/10 border border-primary/40 md:w-[80px] w-[64px] h-[34px] rounded text-primary font-medium cursor-pointer"
+                  className="flex items-center justify-center gap-1 bg-primary/10 border border-primary/40 md:w-20 w-16 h-8.5 rounded text-primary font-medium cursor-pointer"
                   onClick={() => addToCart(product._id)}
                 >
                   <img src={assets.cart_icon} alt="cart_icon" />
                   Add
                 </button>
               ) : (
-                <div className="flex items-center justify-center gap-2 md:w-20 w-16 h-[34px] bg-primary/25 rounded select-none">
+                <div className="flex items-center justify-center gap-2 md:w-20 w-16 h-8.5 bg-primary/25 rounded select-none">
                   <button
                     onClick={() => removeFromCart(product._id)}
                     className="cursor-pointer text-md px-2 h-full"
